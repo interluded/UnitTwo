@@ -9,5 +9,11 @@ public class TestingArrayMethods {
         System.out.println(ArrayMethods.avgArray(randoms));
         System.out.println(ArrayMethods.linearSearch(randoms, 12));
         System.out.println(ArrayMethods.findMin(randoms));
+        int[] numbers = {100, 200, 300, 400, 500};
+        ArrayMethods.swap(numbers, 1, 2);
+        ArrayMethods.printArray(numbers);
+        String[] words = {"apple", "banana", "cherry", "date", "elderberry"};
+        ArrayMethods.swap(words, 0, 3);
+        ArrayMethods.printArray(words);
     }
 }

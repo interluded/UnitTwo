@@ -96,6 +96,15 @@ public class ArrayMethods {
 
         return minIndex;
     }
-
+    public static void swap(int[] array, int x, int y) {
+        int temp = array[x];
+        array[x] = array[y];
+        array[y] = temp;
+    }
+    public static void swap(String[] array, int x, int y) {
+        String temp = array[x];
+        array[x] = array[y];
+        array[y] = temp;
+    }
 
 }
