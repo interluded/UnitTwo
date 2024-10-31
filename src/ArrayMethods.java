@@ -80,17 +80,22 @@ public class ArrayMethods {
         return minIndex;
     }
 
-    public static int findMin(String[] arr) {
-        int minIndex = 0;
-        int minLength = arr[0].length();
-        for (int i = 1; i < arr.length; i++) {
-            if (arr[i].length() < minLength) {
-                minLength = arr[i].length();
+    public static int findMin(int[] arr, int start)
+    {
+        int minValue = arr[start];
+        int minIndex = start;
+
+        for (int i = start + 1; i < arr.length; i++)
+        {
+            if (arr[i] < minValue)
+            {
+                minValue = arr[i];
                 minIndex = i;
             }
         }
-        return minIndex;
 
+        return minIndex;
     }
+
 
 }

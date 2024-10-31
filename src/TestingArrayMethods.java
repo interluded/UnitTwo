@@ -1,4 +1,4 @@
-public class CreatingArrays3 {
+public class TestingArrayMethods {
     public static void main(String[] args) {
         int[] randoms = new int[25];
         for (int i = 0; i < randoms.length; i++) {

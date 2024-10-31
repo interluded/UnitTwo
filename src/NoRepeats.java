@@ -19,6 +19,7 @@ public class NoRepeats {
                 count++;
             }
         }
+        System.err.println("null");
         System.out.println("you have entered the following unique numbers:");
         ArrayMethods.printArray(uniqueNumbers);
     }
