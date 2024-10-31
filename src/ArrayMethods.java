@@ -80,15 +80,12 @@ public class ArrayMethods {
         return minIndex;
     }
 
-    public static int findMin(int[] arr, int start)
-    {
+    public static int findMin(int[] arr, int start) {
         int minValue = arr[start];
         int minIndex = start;
 
-        for (int i = start + 1; i < arr.length; i++)
-        {
-            if (arr[i] < minValue)
-            {
+        for (int i = start + 1; i < arr.length; i++) {
+            if (arr[i] < minValue) {
                 minValue = arr[i];
                 minIndex = i;
             }
@@ -96,15 +93,44 @@ public class ArrayMethods {
 
         return minIndex;
     }
+
     public static void swap(int[] array, int x, int y) {
         int temp = array[x];
         array[x] = array[y];
         array[y] = temp;
     }
+
     public static void swap(String[] array, int x, int y) {
         String temp = array[x];
         array[x] = array[y];
         array[y] = temp;
     }
 
+    public static void selectionSort(int[] array) {
+        int n = array.length;
+        for (int i = 0; i < n - 1; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < n; j++) {
+                if (array[j] < array[minIndex]) {
+                    minIndex = j;
+                }
+            }
+
+            swap(array, i, minIndex);
+        }
+    }
+
+    public static void selectionSort(String[] array) {
+        int n = array.length;
+        for (int i = 0; i < n - 1; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < n; j++) {
+                if (array[j].compareTo(array[minIndex]) < 0) {
+                    minIndex = j;
+                }
+            }
+
+            swap(array, i, minIndex);
+        }
+    }
 }
